@@ -14,10 +14,6 @@ class ViewController: UIViewController {
     var interval = TimeInterval(1)
     
     @IBOutlet weak var timeLabel: UILabel!
-    
-    
-    
-    
     @IBAction func startTimer(_ sender: UIBarButtonItem) {
        startMyTimer()
     }
@@ -25,48 +21,61 @@ class ViewController: UIViewController {
         timer.invalidate()
     }
     @IBAction func buttonPlusTen(_ sender: Any) {
-      counterTimer = counterTimer + 10
+      counterTimer += 10
+      updateLabel()
+     
     }
     
     @IBAction func buttonMinusTen(_ sender: Any) {
         if counterTimer > 10{
-        counterTimer = counterTimer - 10
+        counterTimer -= 10
+            updateLabel()
         }
     }
     
     @IBAction func buttonReset(_ sender: Any) {
         timer.invalidate()
         counterTimer = 20
-        timeLabel.text = String(counterTimer)
+        updateLabel()
+        timeLabel.textColor = .black
         
     }
-    
-    
-    
     
     
     @objc func puskTimer(){
         
         if counterTimer >= 0{
-            timeLabel.text = String(counterTimer)
+          updateColorTimer()
+          updateLabel()
             counterTimer -= 1
         } else {
             timer.invalidate()
         }
-  
-      
     }
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timeLabel.text = String(counterTimer)
+        updateLabel()
  
     }
     
     func startMyTimer(){
         self.timer = Timer.scheduledTimer(timeInterval:interval, target: self, selector: #selector(puskTimer), userInfo: nil, repeats: true)
+    }
+    
+    func updateLabel(){
+        timeLabel.text = String(counterTimer)
+    }
+    
+    func updateColorTimer(){
+        if counterTimer <= 3{
+            timeLabel.textColor = .red
+        } else if counterTimer > 3 && counterTimer < 10 {
+            timeLabel.textColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+        }
+    
     }
 
 
