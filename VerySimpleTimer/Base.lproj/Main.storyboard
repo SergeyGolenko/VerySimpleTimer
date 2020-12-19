@@ -26,11 +26,66 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTr-J0-axX">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jha-Zb-obC">
+                                        <rect key="frame" x="189.5" y="10" width="35" height="30"/>
+                                        <state key="normal" title="reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKc-OG-KgH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZY-uG-HrJ">
+                                        <rect key="frame" x="354" y="5" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="LvS-3H-QM3"/>
+                                        </constraints>
+                                        <state key="normal" title="+10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonMinusTen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wdz-Sm-F9H"/>
+                                            <action selector="buttonPlusTen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QVM-RF-EV8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vto-j4-A0F">
+                                        <rect key="frame" x="8" y="5" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="DJT-mf-5xF"/>
+                                            <constraint firstAttribute="width" constant="50" id="GsU-B5-3ME"/>
+                                        </constraints>
+                                        <state key="normal" title="-10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonMinusTen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eEs-rs-yI6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstItem="Jha-Zb-obC" firstAttribute="centerY" secondItem="qTr-J0-axX" secondAttribute="centerY" id="0Kv-WS-1Jo"/>
+                                    <constraint firstAttribute="bottom" secondItem="vto-j4-A0F" secondAttribute="bottom" constant="5" id="2Ev-2j-2GN"/>
+                                    <constraint firstAttribute="trailing" secondItem="bZY-uG-HrJ" secondAttribute="trailing" constant="10" id="4Xn-SQ-due"/>
+                                    <constraint firstItem="bZY-uG-HrJ" firstAttribute="top" secondItem="qTr-J0-axX" secondAttribute="top" constant="5" id="51f-0N-IOc"/>
+                                    <constraint firstItem="Jha-Zb-obC" firstAttribute="centerX" secondItem="qTr-J0-axX" secondAttribute="centerX" id="6xi-al-E2q"/>
+                                    <constraint firstItem="vto-j4-A0F" firstAttribute="leading" secondItem="qTr-J0-axX" secondAttribute="leading" constant="8" id="ACR-56-GwU"/>
+                                    <constraint firstAttribute="bottom" secondItem="bZY-uG-HrJ" secondAttribute="bottom" constant="5" id="Q11-zl-5sQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="Wzs-rf-C06"/>
+                                    <constraint firstItem="vto-j4-A0F" firstAttribute="top" secondItem="qTr-J0-axX" secondAttribute="top" constant="5" id="xCx-Ej-WOr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nHP-7f-6cw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Arc-8e-Ze0"/>
+                            <constraint firstItem="qTr-J0-axX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EOE-rM-Odi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qTr-J0-axX" secondAttribute="trailing" id="KR7-fv-Huo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qTr-J0-axX" secondAttribute="bottom" id="Pbt-vo-H8d"/>
                             <constraint firstItem="nHP-7f-6cw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="V3b-y2-2F3"/>
                         </constraints>
                     </view>
@@ -76,6 +131,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
