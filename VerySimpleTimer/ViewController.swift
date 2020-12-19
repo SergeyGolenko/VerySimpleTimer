@@ -8,6 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBAction func startTimer(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func stopTimer(_ sender: UIBarButtonItem) {
+    }
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
